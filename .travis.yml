@@ -1,4 +1,4 @@
-anguage: node_js
+language: node_js
 
 node_js:
   - 10
@@ -6,6 +6,24 @@ node_js:
 
 jobs:
   include:
+    # the validation stage is to run our tests
+    - stage: validating
+      node_js: lts/*
+      name: "Linting"
+      script:
+        - npm run lint
+      name: "Unit Testing"
+      script:
+        - npm run test
+      name: "End to End Testing"
+      script:
+        - npm run test:e2e
+      name: "Test coverage"
+      script:
+        - npm run test:cov
+    - stage: build
+      script:
+        - npm run build
     # Define the release stage that runs semantic-release
     - stage: release
       node_js: lts/*
