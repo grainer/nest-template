@@ -1,6 +1,6 @@
 {
   "name": "nest-template",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "Nest TypeScript starter template",
   "author": "gimyboya <amine@grainer.io>",
   "repository": {
@@ -21,7 +21,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@nestjs/common": "^6.7.2",
@@ -41,6 +42,7 @@
     "@types/supertest": "^2.0.8",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
+    "semantic-release": "^15.13.24",
     "supertest": "^4.0.2",
     "ts-jest": "^24.1.0",
     "ts-loader": "^6.1.1",
