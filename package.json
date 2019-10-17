@@ -5,7 +5,7 @@
   "author": "gimyboya <amine@grainer.io>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gimyboya/Nest-starter"
+    "url": "https://github.com/grainer/nest-template"
   },
   "license": "MIT",
   "scripts": {
@@ -55,7 +55,7 @@
       "json",
       "ts"
     ],
-    "rootDir": "src",
+    "rootDir": "test",
     "testRegex": ".spec.ts$",
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
