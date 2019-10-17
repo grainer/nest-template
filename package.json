@@ -1,6 +1,6 @@
 {
   "name": "nest-template",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "Nest TypeScript starter template",
   "author": "gimyboya <amine@grainer.io>",
   "repository": {
@@ -9,6 +9,7 @@
   },
   "license": "MIT",
   "scripts": {
+    "commit": "npx git-cz",
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -21,7 +22,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@nestjs/common": "^6.7.2",
@@ -32,6 +34,8 @@
     "rxjs": "^6.5.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@nestjs/cli": "^6.9.0",
     "@nestjs/schematics": "^6.7.0",
     "@nestjs/testing": "^6.7.1",
@@ -39,8 +43,10 @@
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.5",
     "@types/supertest": "^2.0.8",
+    "husky": "^3.0.9",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
+    "semantic-release": "^15.13.24",
     "supertest": "^4.0.2",
     "ts-jest": "^24.1.0",
     "ts-loader": "^6.1.1",
@@ -48,6 +54,11 @@
     "tsconfig-paths": "^3.9.0",
     "tslint": "^5.20.0",
     "typescript": "^3.6.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "jest": {
     "moduleFileExtensions": [
