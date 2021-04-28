@@ -1,0 +1,83 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "21:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.22
+    - 14.14.25
+    - 14.14.26
+    - 14.14.27
+    - 14.14.28
+    - 14.14.29
+    - 14.14.31
+    - 14.14.32
+    - 14.14.33
+    - 14.14.34
+    - 14.14.35
+    - 14.14.36
+    - 14.14.37
+    - 14.14.39
+    - 14.14.41
+    - 15.0.0
+  - dependency-name: "@types/jest"
+    versions:
+    - 26.0.21
+    - 26.0.22
+  - dependency-name: husky
+    versions:
+    - 5.2.0
+  - dependency-name: ts-jest
+    versions:
+    - 26.5.4
+  - dependency-name: "@nestjs/cli"
+    versions:
+    - 7.5.4
+    - 7.5.5
+    - 7.5.6
+  - dependency-name: "@nestjs/schematics"
+    versions:
+    - 7.2.7
+    - 7.2.8
+    - 7.2.9
+    - 7.3.0
+  - dependency-name: prettier
+    versions:
+    - 2.2.1
+  - dependency-name: ts-node
+    versions:
+    - 9.1.1
+  - dependency-name: rimraf
+    versions:
+    - 3.0.2
+  - dependency-name: handlebars
+    versions:
+    - 4.7.6
+    - 4.7.7
+  - dependency-name: codecov
+    versions:
+    - 3.7.1
+  - dependency-name: semantic-release
+    versions:
+    - 17.2.3
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
+    - 6.5.4
+  - dependency-name: npm
+    versions:
+    - 6.14.11
+  - dependency-name: node-fetch
+    versions:
+    - 2.6.1
+  - dependency-name: bin-links
+    versions:
+    - 1.1.8
+  - dependency-name: https-proxy-agent
+    versions:
+    - 2.2.4
